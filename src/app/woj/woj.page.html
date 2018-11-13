@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Województwo
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label>Województwo</ion-label>
+      <ion-select okText="Ok" [(ngModel)]="woj" (ionChange)="changeBoolBtnDalej()">
+        <ion-select-option value="-1">Brak</ion-select-option>
+        <ion-select-option value="0">Świętokrzyskie</ion-select-option>
+        <ion-select-option value="1">Mazowieckie</ion-select-option>
+        <ion-select-option value="2">Małopolskie</ion-select-option>
+        <ion-select-option value="3">Lubelskie</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-img [src]="'../../assets/images/' + woj + '.png'"></ion-img>
+  </ion-list>
+  <ion-button href="/city/{{woj}}" expand="block" color="success" [disabled]="btnDalej">
+    Dalej
+  </ion-button>
+  <ion-button href="/home" expand="block" color="danger">
+    Wyloguj
+  </ion-button>
+
+</ion-content>
