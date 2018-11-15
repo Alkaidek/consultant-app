@@ -24,4 +24,10 @@
     <ion-button (click)="checkLogin('/woj')" expand="block">
       Zaloguj
     </ion-button>
+
+  <ion-slides pager>
+    <ion-slide *ngFor="let slide of slider">
+      <img [src]="slide.image" />
+    </ion-slide>
+  </ion-slides>
 </ion-content>

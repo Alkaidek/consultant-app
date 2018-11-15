@@ -44,11 +44,11 @@
           <ion-label> {{objTechaer[teacher].mail}}</ion-label>
         </ion-item>
 
-        <ion-item *ngIf="objTechaer[teacher].podreczniki === 'MAC edukacja'" class="activated" color="success">
+        <ion-item *ngIf="objTechaer[teacher].podreczniki.includes('MAC') " class="activated" color="success">
           <ion-icon name="bookmarks" slot="start"></ion-icon>
           <ion-label> {{objTechaer[teacher].podreczniki}}</ion-label>
         </ion-item>
-        <ion-item *ngIf="objTechaer[teacher].podreczniki !== 'MAC edukacja'" class="activated" color="danger">
+        <ion-item *ngIf="!objTechaer[teacher].podreczniki.includes('MAC')" class="activated" color="danger">
           <ion-icon name="bookmarks" slot="start"></ion-icon>
           <ion-label> {{objTechaer[teacher].podreczniki}}</ion-label>
         </ion-item>
